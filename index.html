@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="游戏策划（技术向）作品集，包含 AR 原型、游戏 Demo、AIGC 动画与拆解案。"
+    />
+    <title>作品集 · 游戏策划 / 技术向</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#works">跳到作品</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" data-brand>P·26</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#works">作品</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__scan" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="hero__eyebrow" data-hero-eyebrow>Portfolio · 2026</p>
+          <h1 class="hero__title" data-hero-title>交互设计 / 游戏设计</h1>
+          <p class="hero__tag" data-hero-tag>AR 原型 · 游戏 Demo · 拆解案</p>
+          <a class="hero__cta" href="#works" data-hero-cta>
+            <span>查看作品</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <p class="hero__scroll" aria-hidden="true">Scroll</p>
+      </section>
+
+      <section class="works" id="works" aria-labelledby="works-title">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Selected Works</p>
+            <h2 class="section-title" id="works-title">作品</h2>
+          </div>
+          <div
+            class="filters"
+            role="group"
+            aria-label="作品筛选"
+            data-filters
+          ></div>
+        </div>
+        <div class="work-list" data-work-list></div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about__grid">
+          <div class="about__lead">
+            <p class="kicker">About</p>
+            <h2 class="section-title" id="about-title">关于</h2>
+          </div>
+          <div class="about__body">
+            <p class="about__text" data-about-text></p>
+            <ul class="skill-list" data-skill-list></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__inner">
+          <p class="kicker">Contact</p>
+          <h2 class="section-title" id="contact-title">联系</h2>
+          <div class="contact__row">
+            <a class="contact__mail" href="mailto:hello@example.com" data-email>
+              hello@example.com
+            </a>
+            <p class="contact__meta" data-location>上海 · 可远程</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-footer-brand>P·26</p>
+      <p>© 2026</p>
+    </footer>
+
+    <div class="detail" data-detail aria-hidden="true">
+      <button class="detail__close" data-detail-close aria-label="关闭作品详情">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="detail__body" data-detail-body></div>
+    </div>
+
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button
+        class="lightbox__close"
+        data-lightbox-close
+        aria-label="关闭大图"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <button
+        class="lightbox__nav lightbox__nav--prev"
+        data-lightbox-prev
+        aria-label="上一张"
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <div class="lightbox__stage">
+        <img data-lightbox-img alt="" />
+        <p class="lightbox__caption" data-lightbox-caption></p>
+      </div>
+      <button
+        class="lightbox__nav lightbox__nav--next"
+        data-lightbox-next
+        aria-label="下一张"
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <script src="data/site.js"></script>
+    <script src="data/works.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
