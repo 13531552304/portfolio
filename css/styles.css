@@ -893,32 +893,19 @@ video {
 
 .gallery__main {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: min(72svh, 760px);
   background: var(--bg-soft);
   border: 1px solid var(--line);
   scrollbar-width: thin;
   scrollbar-color: rgba(198, 255, 61, 0.5) rgba(7, 10, 6, 0.5);
 }
 
-.gallery__main:not(.is-long) {
-  aspect-ratio: 16 / 10;
-}
-
 .gallery__main img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: zoom-in;
-}
-
-.gallery__main.is-long {
-  aspect-ratio: auto;
-  max-height: min(72svh, 760px);
-  overflow-y: auto;
-}
-
-.gallery__main.is-long img {
   height: auto;
+  cursor: zoom-in;
 }
 
 .gallery__main::-webkit-scrollbar {
