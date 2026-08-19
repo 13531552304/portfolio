@@ -290,8 +290,11 @@
             src="${escapeHtml(work.videos[0].src)}"
             poster="${escapeHtml(work.videos[0].poster || work.cover)}"
             controls
-            preload="none"
+            preload="auto"
             playsinline
+            webkit-playsinline
+            x5-playsinline
+            x5-video-player-type="h5"
           ></video>
         </div>
       `;
@@ -397,6 +400,7 @@
         const holder = $("[data-media]");
         holder.innerHTML = missingMediaHtml("视频素材待补充", video.src);
       });
+      video.load();
 
       $$("[data-video-index]").forEach((button) => {
         button.addEventListener("click", () => {
