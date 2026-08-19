@@ -298,6 +298,22 @@
     }
 
     if (work.pdf) {
+      const desktop = window.matchMedia("(min-width: 861px)").matches;
+      if (!desktop) {
+        return `
+          <div class="pdf-mobile">
+            <a
+              class="pdf-mobile__link"
+              href="${escapeHtml(work.pdf)}"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="pdf-mobile__label">打开 PDF 拆解案</span>
+              <span class="pdf-mobile__hint">将在浏览器新标签页打开</span>
+            </a>
+          </div>
+        `;
+      }
       return `
         <iframe
           class="pdf-frame"
