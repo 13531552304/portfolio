@@ -56,8 +56,15 @@
     $("[data-about-text]").textContent = site.about;
 
     const emailEl = $("[data-email]");
-    emailEl.textContent = site.email;
+    emailEl.textContent = `邮箱：${site.email}`;
     emailEl.setAttribute("href", `mailto:${site.email}`);
+
+    const phoneEl = $("[data-phone]");
+    if (phoneEl) {
+      phoneEl.textContent = `电话：${site.phone}`;
+      phoneEl.setAttribute("href", `tel:${site.phone}`);
+    }
+
     $("[data-location]").textContent = site.location;
     $("[data-footer-brand]").textContent = site.brand;
 
@@ -290,33 +297,14 @@
             src="${escapeHtml(work.videos[0].src)}"
             poster="${escapeHtml(work.videos[0].poster || work.cover)}"
             controls
-            preload="auto"
+            preload="none"
             playsinline
-            webkit-playsinline
-            x5-playsinline
-            x5-video-player-type="h5"
           ></video>
         </div>
       `;
     }
 
     if (work.pdf) {
-      const desktop = window.matchMedia("(min-width: 861px)").matches;
-      if (!desktop) {
-        return `
-          <div class="pdf-mobile">
-            <a
-              class="pdf-mobile__link"
-              href="${escapeHtml(work.pdf)}"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="pdf-mobile__label">打开 PDF 拆解案</span>
-              <span class="pdf-mobile__hint">将在浏览器新标签页打开</span>
-            </a>
-          </div>
-        `;
-      }
       return `
         <iframe
           class="pdf-frame"
@@ -400,7 +388,6 @@
         const holder = $("[data-media]");
         holder.innerHTML = missingMediaHtml("视频素材待补充", video.src);
       });
-      video.load();
 
       $$("[data-video-index]").forEach((button) => {
         button.addEventListener("click", () => {

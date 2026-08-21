@@ -645,6 +645,29 @@ video {
   color: var(--accent);
 }
 
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact__phone {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact__phone::before {
+  content: "> ";
+  color: var(--accent);
+}
+
+.contact__phone:hover {
+  color: var(--accent);
+}
+
 .contact__meta {
   margin: 0;
   color: var(--muted);
@@ -893,19 +916,32 @@ video {
 
 .gallery__main {
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: min(72svh, 760px);
+  overflow: hidden;
   background: var(--bg-soft);
   border: 1px solid var(--line);
   scrollbar-width: thin;
   scrollbar-color: rgba(198, 255, 61, 0.5) rgba(7, 10, 6, 0.5);
 }
 
+.gallery__main:not(.is-long) {
+  aspect-ratio: 16 / 10;
+}
+
 .gallery__main img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   cursor: zoom-in;
+}
+
+.gallery__main.is-long {
+  aspect-ratio: auto;
+  max-height: min(72svh, 760px);
+  overflow-y: auto;
+}
+
+.gallery__main.is-long img {
+  height: auto;
 }
 
 .gallery__main::-webkit-scrollbar {
@@ -1038,48 +1074,6 @@ video {
   margin-top: 20px;
   border: 1px solid var(--line);
   background: var(--bg-soft);
-}
-
-.pdf-mobile {
-  min-height: 240px;
-  margin-top: 20px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(198, 255, 61, 0.08), transparent 55%),
-    var(--bg-soft);
-}
-
-.pdf-mobile__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 22px 28px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: var(--bg);
-  text-align: center;
-  text-decoration: none;
-}
-
-.pdf-mobile__label {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-.pdf-mobile__hint {
-  font-size: 0.78rem;
-  opacity: 0.82;
-}
-
-.pdf-mobile__link:hover {
-  background: transparent;
-  color: var(--accent);
 }
 
 .lightbox {
@@ -1341,10 +1335,6 @@ video {
   .detail__grid {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .pdf-action {
-    display: none;
   }
 
   .lightbox {

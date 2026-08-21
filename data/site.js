@@ -8,6 +8,7 @@ window.SITE = {
   about:
     "专注交互设计、游戏设计后与unity原型验证 当前作品涵盖 AR 空间交互、游戏机制验证、AIGC动画与技术拆解",
   skills: ["游戏策划", "系统设计", "技术原型", "Unity", "玩法验证"],
-  email: "1725924@qq.com",
+  phone: "13531552304",
+  email: "172924778@qq.com",
   location: "广州 · 可远程",
 };

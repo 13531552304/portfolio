@@ -8,7 +8,7 @@ window.WORKS = [
     category: "AR",
     title: "AR 空间交互 Demo",
     summary:
-      "三个 AR 程序演示视频，配套三张海报，展示空间定位、交互流程与视觉反馈。",
+      "AR程序设计，包含设计说明与演示demo，展示APP核心功能、交互流程与视觉效果。",
     role: "交互设计 / 原型开发",
     year: "2026",
     tools: ["Unity", "ARKit", "Figma"],
@@ -48,7 +48,7 @@ window.WORKS = [
     category: "游戏",
     title: "游戏 Demo《异世卡牌系统》",
     summary:
-      "一段可玩 Demo 的演示视频，重点展示核心循环、关卡节奏与操作手感。",
+      "独立制作的Demo演示视频，旨在熟悉各类游戏的制作流程，对案例拆解举一反三。",
     role: "游戏设计 / 关卡设计",
     year: "2025",
     tools: ["Unity", "C#", "Blender"],
@@ -71,7 +71,7 @@ window.WORKS = [
     category: "拆解案",
     title: "交互拆解分析",
     summary:
-      "一份完整的拆解案 PDF，从体验目标、信息架构到关键交互路径逐层分析。",
+      "游戏拆解案PDF，系统分析游戏，提炼玩法循环、设计目的、机制创新等亮点。",
     role: "交互设计 / 设计分析",
     year: "2025",
     tools: ["Figma", "Notion"],
@@ -86,7 +86,7 @@ window.WORKS = [
     index: "04",
     category: "其他",
     title: "AIGC 动画概念片",
-    summary: "一段 AIGC 动画片段，探索风格化视觉与镜头节奏。",
+    summary: "AIGC工具运用实例，旨在练习生成式AI及视听语言的运用，探索其在游戏CG领域的可能性。",
     role: "AIGC / 动画方向",
     year: "2026",
     tools: ["AIGC", "视频生成"],
@@ -121,4 +121,3 @@ window.WORKS = [
     pdf: null,
   },
 ];
-
