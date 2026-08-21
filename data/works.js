@@ -46,7 +46,7 @@ window.WORKS = [
     slug: "game-demo",
     index: "02",
     category: "游戏",
-    title: "游戏 Demo：机制验证",
+    title: "游戏 Demo《异世卡牌系统》",
     summary:
       "一段可玩 Demo 的演示视频，重点展示核心循环、关卡节奏与操作手感。",
     role: "游戏设计 / 关卡设计",
@@ -121,3 +121,4 @@ window.WORKS = [
     pdf: null,
   },
 ];
+
